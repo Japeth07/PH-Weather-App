@@ -1,4 +1,4 @@
-# 🇵🇭 PH Weather Dashboard 
+# PH Weather Dashboard 
 
 A modern, high-performance weather dashboard specifically tailored for the Philippines. This application harmonizes real-time data from the OpenWeather API with the spatial capabilities of Leaflet.js to offer a comprehensive look at local weather patterns, 5-day forecasts, and interactive atmospheric maps.
 

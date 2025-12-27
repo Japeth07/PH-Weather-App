@@ -1,55 +1,69 @@
-PH Weather Dashboard 
-A modern, responsive weather dashboard specifically designed for the Philippines. This application integrates the OpenWeather API with Leaflet.js to provide real-time weather data, 5-day forecasts, and interactive weather map layers.
+# 🇵🇭 PH Weather Dashboard 
 
-Features
-Real-time Weather: Get current temperature and weather descriptions for any city in the Philippines.
+A modern, high-performance weather dashboard specifically tailored for the Philippines. This application harmonizes real-time data from the OpenWeather API with the spatial capabilities of Leaflet.js to offer a comprehensive look at local weather patterns, 5-day forecasts, and interactive atmospheric maps.
 
-Interactive Maps: Visualise weather patterns using Leaflet.js with toggleable layers for Temperature and Wind Speed.
+---
 
-5-Day Forecast: View upcoming weather trends with midday snapshots.
+## Features
 
-Geolocation Search: specifically filtered for cities within the Philippines using the OpenWeather Geocoding API.
+### Real-time Intelligence
+- **Live Local Data:** Instant access to temperature, humidity, and weather conditions for any Philippine city.
+- **Geolocation Search:** Precision filtering via OpenWeather Geocoding API to ensure results stay within the Philippine archipelago.
 
-Dynamic UI: * Dark/Light Mode: Toggle between themes for better visibility.
+### Interactive Visualization
+- **Weather Map Layers:** Toggleable Leaflet.js overlays for **Temperature** and **Wind Speed**.
+- **Fullscreen Experience:** Expand the map view for a deep-dive geographical analysis of weather systems.
 
-Fullscreen Map: Expand the map view for a more detailed geographical analysis.
+### Forecasting & Analysis
+- **5-Day Forecast:** Daily snapshots (midday) to help users plan ahead.
+- **Local Unit Optimization:** Automatically converts wind speed from meters per second (m/s) to kilometers per hour (km/h) to align with local PAGASA-style reporting.
 
-Unit Conversion: Automatically converts wind speed from m/s to km/h for local preference.
+### Modern UI/UX
+- **Dual Themes:** Seamlessly toggle between **Dark** and **Light** modes.
+- **Glassmorphism Design:** A clean, frosted-glass aesthetic that remains responsive across mobile and desktop devices.
 
-Tech Stack
-Frontend: HTML5, CSS3 (Flexbox/Grid), JavaScript (ES6+).
+---
 
-APIs: OpenWeatherMap API (Current Weather, Forecast, and Weather Maps).
+## Tech Stack
 
-Libraries: * Leaflet.js for interactive maps.
+- **Core:** HTML5, CSS3 (Flexbox/Grid), JavaScript (ES6+).
+- **APIs:** [OpenWeatherMap API](https://openweathermap.org/api) (Current, Forecast, and Tile Layers).
+- **Libraries:**
+  - **[Leaflet.js](https://leafletjs.com/):** For rendering interactive, high-performance maps.
+  - **[Boxicons](https://boxicons.com/):** For crisp, modern iconography.
+  - **[OpenStreetMap](https://www.openstreetmap.org/):** Base tile provider for the map interface.
 
-Boxicons for modern iconography.
+---
 
-OpenStreetMap for map tiles.
+## Project Structure
 
+```text
+├── index.html   # Semantic HTML structure and UI components
+├── style.css    # Responsive design, theme variables, and Glassmorphism effects
+└── script.js    # API integration, Leaflet map logic, and UI state management
 Installation & Setup
 Clone the repository:
 
 Bash
 
-git clone https://github.com/yourusername/ph-weather-dashboard.git
-API Key Setup: The project currently uses a hardcoded API key. For production, it is recommended to:
+git clone [https://github.com/yourusername/ph-weather-dashboard.git](https://github.com/yourusername/ph-weather-dashboard.git)
+API Key Setup:
 
-Sign up at OpenWeatherMap.
+Sign up for a free account at OpenWeatherMap.
 
-Replace the apiKey variable in script.js with your unique key.
+Locate the apiKey variable in script.js.
 
-Run the App: Simply open the index.html file in any modern web browser, or use a "Live Server" extension in VS Code.
+Replace the placeholder string with your unique API key.
 
-Project Structure
-Plaintext
+Launch the App:
 
-├── index.html   # Main structure and layout
-├── style.css    # Custom styling, glassmorphism effects, and responsiveness
-└── script.js    # Logic for API calls, map rendering, and UI interactions
+Simply open index.html in your preferred web browser.
+
+Recommendation: Use the Live Server extension in VS Code for the best development experience.
+
 How It Works
-Geocoding: When a user searches for a city, the app calls the Geocoding API to get precise latitude and longitude.
+Geocoding: When a city is entered, the app requests precise coordinates (Lat/Lon) to prevent cross-country city name confusion.
 
-Data Fetching: The app fetches data from the weather and forecast endpoints simultaneously.
+Synchronized Fetching: The system fetches current weather and the 5-day forecast simultaneously using fetch() and Promise.all logic.
 
-Map Integration: The Leaflet map updates its view to the city's coordinates and overlays the OpenWeather tile layer (Temperature or Wind) on top of OpenStreetMap.
+Spatial Rendering: The Leaflet map pans to the city's center, while a specialized tile layer is requested from OpenWeather to overlay real-time heatmaps or wind-flow patterns.

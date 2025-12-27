@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #00b4db, #0083b0);
+    color: white;
+}
+
+body.dark {
+    background: linear-gradient(135deg, #0f2027, #203a43);
+}
+
+.app {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background: rgba(0,0,0,0.25);
+    padding: 25px;
+}
+
+.sidebar h2 {
+    margin-bottom: 25px;
+}
+
+.sidebar nav a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.sidebar nav a.active,
+.sidebar nav a:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+.content {
+    flex: 1;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.25);
+    padding: 12px;
+    border-radius: 14px;
+    width: 360px;
+}
+
+.search-box input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: white;
+    outline: none;
+    padding: 8px;
+}
+
+.search-box button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.top-buttons button {
+    background: rgba(255,255,255,0.25);
+    border: none;
+    padding: 12px;
+    border-radius: 12px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#errorMsg {
+    color: #ffd6d6;
+    margin-top: 10px;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 25px;
+    margin-top: 20px;
+    flex: 1;
+}
+
+.weather-card {
+    background: rgba(255,255,255,0.2);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.weather-card img {
+    width: 150px;
+}
+
+.main-value {
+    font-size: 64px;
+    margin: 10px 0;
+}
+
+.map-card {
+    background: rgba(255,255,255,0.2);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+#map {
+    height: 100%;
+    border-radius: 15px;
+}
+
+/* Forecast */
+.forecast {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.forecast-card {
+    background: rgba(255,255,255,0.2);
+    border-radius: 15px;
+    padding: 10px;
+    width: 90px;
+    text-align: center;
+}
+
+.forecast-card img {
+    width: 50px;
+}
+
+/* Fullscreen Map */
+.map-fullscreen .weather-card {
+    display: none;
+}
+
+.map-fullscreen .dashboard {
+    grid-template-columns: 1fr;
+}
+
+.map-fullscreen #map {
+    height: calc(100vh - 130px);
+}

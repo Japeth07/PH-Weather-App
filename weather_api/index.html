@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PH Weather Dashboard</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="icon.jpg">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h2>🌤️ PH Weather</h2>
+        <nav>
+            <!-- Temperature with icon -->
+            <a class="active" data-layer="temp_new">
+                <i class='bx bx-thermometer'></i> Temperature
+            </a>
+            <!-- Wind with icon -->
+            <a data-layer="wind_new">
+                <i class='bx bx-wind'></i> Wind
+            </a>
+        </nav>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="content">
+
+        <!-- TOP BAR -->
+        <header class="top-bar">
+            <div class="search-box">
+                <i class='bx bx-map'></i>
+                <input type="text" id="cityInput" placeholder="Search city in Philippines">
+                <button id="searchBtn"><i class='bx bx-search'></i></button>
+            </div>
+
+            <div class="top-buttons">
+                <button id="mapToggle" class="map-toggle">
+                    <i class='bx bx-fullscreen'></i>
+                </button>
+                <button id="themeToggle" class="map-toggle">
+                    <i class='bx bx-moon'></i>
+                </button>
+            </div>
+        </header>
+
+        <p id="errorMsg"></p>
+
+        <!-- CONTENT -->
+        <section class="dashboard">
+            <!-- WEATHER CARD -->
+            <div class="weather-card">
+                <img id="weatherIcon">
+                <h1 id="mainValue" class="main-value">--°C</h1> <!-- Big value: temp or wind -->
+                <p id="description">Search a city</p>
+
+                <!-- 5-DAY FORECAST -->
+                <div id="forecast" class="forecast"></div>
+            </div>
+
+            <!-- MAP -->
+            <div class="map-card">
+                <div id="map"></div>
+            </div>
+        </section>
+
+    </main>
+</div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

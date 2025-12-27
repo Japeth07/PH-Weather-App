@@ -46,7 +46,7 @@ Clone the repository:
 
 Bash
 
-git clone [https://github.com/yourusername/ph-weather-dashboard.git](https://github.com/yourusername/ph-weather-dashboard.git)
+git clone [https://github.com/japeth07/ph-weather-dashboard.git](https://github.com/japeth07/ph-weather-dashboard.git)
 API Key Setup:
 
 Sign up for a free account at OpenWeatherMap.
